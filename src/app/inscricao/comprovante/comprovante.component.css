@@ -1,0 +1,54 @@
+.contentPosition{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    border-width: thin;
+    border: solid;
+    border-color: rgb(211, 211, 211);
+}
+
+.pageTitle{
+    margin-left: 4%;
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.formPosition{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.formLine{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.commonInput{
+    width: 35%;
+}
+
+.formButtonPosition{
+    width: 100%;
+    text-align: center;
+}
+
+.submitButton{
+    font-size: large;
+}
+
+.returnButtonPlacement{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}

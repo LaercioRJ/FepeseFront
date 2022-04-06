@@ -1,0 +1,62 @@
+<div class="contentPosition">
+    <div class="pageTitle">
+        <span>Inscrever-se</span>
+    </div>
+    <form [formGroup] = "inscription" class="formPosition">
+        <div class="formLine">
+            <mat-form-field class="commonInput" appearance = "outline">
+                <mat-label>Nome Completo</mat-label>
+                <input formControlName="name" type="text" matInput required>
+                <mat-error *ngIf = "this.inscription.controls['name'].hasError('required')">O campo nome é obrigatório.</mat-error>
+                <mat-error *ngIf = "this.inscription.controls['name'].hasError('pattern')">Por favor, utilize apenas letras ou o apostrofo.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="commonInput" appearance = "outline">
+                <mat-label>CPF</mat-label>
+                <input formControlName="cpf" type="text" matInput required>
+                <mat-error *ngIf = "this.inscription.controls['cpf'].hasError('pattern')">
+                    O campo CPF deve possuir pelo menos 11 digitos e apenas números.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formLine">
+            <mat-form-field class="commonInput" appearance = "outline">
+                <mat-label>Endereço</mat-label>
+                <input formControlName="address" type="text" matInput required>
+                <mat-error *ngIf = "this.inscription.controls['address'].hasError('required')">O campo endereço é obrigatório.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="commonInput" appearance = "fill">
+                <mat-label>Estado</mat-label>
+                <mat-select (selectionChange) = "selectState()" formControlName="state" required>
+                    <mat-option [value] = "state.estado_id" *ngFor="let state of states">
+                        {{state.nome}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf = "this.inscription.controls['state'].hasError('required')">Por favor, selecione um estado.</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formLine">
+            <mat-form-field class="commonInput" appearance = "outline">
+                <mat-label>Cargo</mat-label>
+                <input formControlName="position" type="text" matInput required>
+                <mat-error *ngIf = "this.inscription.controls['position'].hasError('required')">O campo cargo é obrigatório.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="commonInput" appearance = "fill">
+                <mat-label>Cidade</mat-label>
+                <mat-select formControlName="city" required>
+                    <mat-option [value]="city.cidade_id" *ngFor="let city of cities">
+                        {{city.nome}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf = "this.inscription.controls['city'].hasError('required')">Por favor, selecione uma cidade.</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formButtonPosition">
+            <button mat-raised-button [disabled] = "inscription.invalid" (click) = "submit()" color="primary" class="submitButton">Submeter Inscrição</button>
+            <br>
+            <br>
+        </div>
+    </form>
+</div>

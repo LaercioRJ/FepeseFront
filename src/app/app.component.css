@@ -1,0 +1,36 @@
+mat-toolbar{
+    z-index: 4;
+    position: relative;
+    height: 65px;
+}
+
+.siteTitle{
+    font-size: x-large;
+    color: white;
+    transition: 1s;
+    margin-top: 8px;
+}
+
+.siteTitle:hover{
+    color: rgb(170, 170, 170);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.topBarIcon{
+    margin-right: 13px;
+    font-size: 34px;
+}
+
+.topBarIcon:hover{
+    cursor: pointer;
+}
+
+.sidenav{
+    background-color: whitesmoke;
+    z-index: 3;
+}
+
+.screenContent{
+    height: 93vh;
+}
