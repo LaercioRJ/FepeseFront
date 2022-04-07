@@ -34,3 +34,17 @@ mat-toolbar{
 .screenContent{
     height: 93vh;
 }
+
+.iconsPosition {
+    margin-left: auto;
+    margin-top: 8px;
+}
+
+.buttonsIcon{
+    margin-right: 25px;
+    font-size: 34px;
+}
+
+.buttonsIcon:hover{
+    cursor: pointer;
+}

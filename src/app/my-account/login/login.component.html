@@ -1,0 +1,40 @@
+<div class="loginPosition">
+    <br>
+    <div class="helloTitle">
+        <span>Seja bem-vindo! Faça login aqui </span>
+    </div>
+
+    <form [formGroup] = "loginForm" class="formPosition">
+        <mat-form-field class="loginForm" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" type="email" matInput placeholder="exemplo@email.com">
+            <mat-icon matSuffix>mail</mat-icon>
+            <mat-error *ngIf = "this.loginForm.controls['email'].hasError('required')">O campo email é obrigatório.</mat-error>
+            <mat-error *ngIf = "this.loginForm.controls['email'].hasError('pattern')">Por favor, utilize todas as estruturas de um email convencional.</mat-error>
+            <mat-error *ngIf = "this.loginForm.controls['email'].value.length > 40">Por favor, limite-se a 40 caracteres.</mat-error>
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field class="loginForm" appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input formControlName="password" type="password" matInput placeholder="Placeholder">
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-error *ngIf = "this.loginForm.controls['password'].value.length > 40">Por favor, limite-se a 40 caracteres.</mat-error>
+            <mat-error *ngIf = "this.loginForm.controls['password'].value.length < 40">Por favor, utilize prlo menos 6 caracteres.</mat-error>
+          </mat-form-field>
+
+          <button [disabled] = "!loginForm.valid" class="loginButton" mat-flat-button color = "primary">Entrar</button>
+        </form>
+
+    <mat-divider class="loginFormDivider"></mat-divider>
+
+    <div class="registerPosition">
+        <span>Ainda não é cadastrado?</span>
+
+        <br>
+
+        <button class="registerButton" mat-flat-button color = "primary">Resgistrar-se</button>
+    </div>
+    <br>
+</div>

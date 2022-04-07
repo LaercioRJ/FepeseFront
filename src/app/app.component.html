@@ -1,6 +1,10 @@
 <mat-toolbar color = "primary" [class.mat-elevation-z4] = "true">
     <mat-icon matRipple (click) = "drawer.toggle()" class="topBarIcon">menu</mat-icon>
     <span (click) = "goBackHomePage()" class="siteTitle">FEPESE Concursos</span>
+    <div class="iconsPosition">
+        <mat-icon (click) = "goLoginPage()" matTooltip = "Fazer login." class="buttonsIcon">account_circle</mat-icon>
+        <mat-icon (click) = "goBackHomePage()" matTooltip = "Voltar a pagina inicial." class="buttonsIcon">home</mat-icon>
+    </div>
 </mat-toolbar>
 
 <mat-drawer-container class="screenContent">

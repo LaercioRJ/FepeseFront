@@ -1,0 +1,46 @@
+.loginPosition{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 3%;
+    border: groove;
+    border-radius: 4%;
+}
+
+.helloTitle{
+    font-size: x-large;
+    text-align: center;
+}
+
+.formPosition{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.loginForm{
+    width: 80%;
+}
+
+.loginFormDivider{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.registerPosition{
+    text-align: center;
+    font-size: medium;
+}
+
+.loginButton{
+    width: 65%;
+    margin-bottom: 2%;
+    font-size: large;
+}
+
+.registerButton{
+    margin-top: 2%;
+    width: 50%;
+    font-size: large;
+}

@@ -15,4 +15,8 @@ export class AppComponent {
   goBackHomePage(): void {
     this.router.navigate(['']);
   }
+
+  goLoginPage(): void {
+    this.router.navigate(['meu_cadastro/login']);
+  }
 }
