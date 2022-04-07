@@ -9,6 +9,7 @@
                 <input formControlName="name" type="text" matInput required>
                 <mat-error *ngIf = "this.inscription.controls['name'].hasError('required')">O campo nome é obrigatório.</mat-error>
                 <mat-error *ngIf = "this.inscription.controls['name'].hasError('pattern')">Por favor, utilize apenas letras ou o apostrofo.</mat-error>
+                <mat-error *ngIf = "this.inscription.controls['name'].value.length > 40">Por favor, limite-se a 40 caracteres.</mat-error>
             </mat-form-field>
 
             <mat-form-field class="commonInput" appearance = "outline">
@@ -24,6 +25,7 @@
                 <mat-label>Endereço</mat-label>
                 <input formControlName="address" type="text" matInput required>
                 <mat-error *ngIf = "this.inscription.controls['address'].hasError('required')">O campo endereço é obrigatório.</mat-error>
+                <mat-error *ngIf = "this.inscription.controls['address'].value.length > 50">Por favor, limite-se a 50 caracteres.</mat-error>
             </mat-form-field>
 
             <mat-form-field class="commonInput" appearance = "fill">
@@ -41,6 +43,7 @@
                 <mat-label>Cargo</mat-label>
                 <input formControlName="position" type="text" matInput required>
                 <mat-error *ngIf = "this.inscription.controls['position'].hasError('required')">O campo cargo é obrigatório.</mat-error>
+                <mat-error *ngIf = "this.inscription.controls['position'].value.length > 50">Por favor, limite-se a 50 caracteres.</mat-error>
             </mat-form-field>
 
             <mat-form-field class="commonInput" appearance = "fill">

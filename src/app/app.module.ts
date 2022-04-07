@@ -8,10 +8,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MaterialModule } from './material-module'; 
 
 import { AppComponent } from './app.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SideMenuComponent,
+    NotFoundPageComponent,
   ],
   imports: [
     AppRoutingModule,

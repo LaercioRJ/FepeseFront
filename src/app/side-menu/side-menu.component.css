@@ -1,0 +1,52 @@
+.menuFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsButton{
+    font-size: medium;
+    width: 100%;
+    text-align: left;
+    height: 35px;
+    margin-bottom: 1%;
+}
+
+.optionsButton::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #1238e0;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    left: 0;
+    transform: scaleY(0);
+    transition: all 0.3s;
+}
+
+.optionsButton:hover::before{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.optionsButton::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #1238e0;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    right: 0;
+    transform: scaleY(0);
+    transition: all 0.4s;
+}
+
+.optionsButton:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.optionsIcons{
+    font-size: 25px;
+}

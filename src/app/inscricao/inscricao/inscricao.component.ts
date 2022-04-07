@@ -30,10 +30,10 @@ export class InscricaoComponent implements OnInit {
 
   ngOnInit(): void {
     this.inscription = this.formBuilder.group({
-      name: new FormControl('', [Validators.required, Validators.pattern('[A-Za-z` ]*')]),
-      address: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required, Validators.pattern('[A-Za-z` ]*'), Validators.maxLength(40)]),
+      address: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       cpf: new FormControl('', [Validators.minLength(11), Validators.maxLength(11), Validators.pattern('[0-9]{11}')]),
-      position: new FormControl('', [Validators.required]),
+      position: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       state: new FormControl('', [Validators.required]),
       city: new FormControl('', [Validators.required])
     });
@@ -146,7 +146,7 @@ export class InscricaoComponent implements OnInit {
         console.log(result.body);
         if (result.status == 200) {
           this.notification.showMessage('Inscrição realizada com sucesso!', 3000);
-          this.router.navigateByUrl(String(result.body));
+          this.router.navigateByUrl('inscrever/'.concat(String(result.body)));
         }
       }
     });
